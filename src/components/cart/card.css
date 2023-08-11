@@ -1,0 +1,14 @@
+.cart-card{
+    display: flex;
+    justify-content: space-evenly;
+    max-width: 60%;
+}
+
+.cart-card img{
+    max-height: 4rem;
+    max-width: 4rem;
+}
+.cart-detail{
+    display: flex;
+    flex-direction: column;
+}

@@ -1,0 +1,10 @@
+.cart-heading{
+    color: #5C2018;
+    margin: 4rem;
+}
+.cart-items{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-left:10rem;
+}
