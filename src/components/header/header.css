@@ -1,0 +1,18 @@
+.header-container{
+    background-color: #BC4639;
+    color:white
+}
+.header{
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between; 
+    max-width: 90%;
+    align-items: center;
+    font-family: 'Raleway', sans-serif;
+}
+.cart-icon{
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
