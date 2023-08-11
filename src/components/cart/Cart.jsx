@@ -1,8 +1,17 @@
-import React from 'react';
-
+import React, { useContext } from 'react';
+import { DataContext } from '../../context/dataProvider';
+import Card from './Card';
+import "./cart.css";
 const Cart = () => {
+  const { cart } = useContext(DataContext);
   return (
-    <div>Cart</div>
+    <div className='cart-container'>
+      {
+        cart.map((cartItem) => (
+          <Card item={ cartItem } key={cartItem.product.id}/>
+        ))
+      }
+    </div>
   )
 }
 
