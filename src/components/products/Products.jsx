@@ -1,5 +1,5 @@
-import React, {useContext} from 'react'
-import { DataContext } from '../../context/dataProvider'
+import React, {useContext} from 'react';
+import { DataContext } from '../../context/dataProvider';
 import Card from './Card';
 import "./product.css"
 const Products = () => {

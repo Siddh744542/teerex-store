@@ -1,7 +1,9 @@
 import React, { useEffect, useContext } from 'react';
 import { DataContext } from "../../context/dataProvider";
 import Header from '../header/Header';
-import Products from "../products/Products"
+import Products from "../products/Products";
+import Filter from "../Filter/Filter";
+import "./home.css";
 const Home = () => {
   const { setProducts } = useContext(DataContext);
 
@@ -16,7 +18,11 @@ const Home = () => {
   return (
     <div>
       <Header />
-      <Products />
+      <div className='container'>
+        <Filter />
+        <Products />  
+      </div>
+      
     </div>
   )
 }

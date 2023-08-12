@@ -1,7 +1,7 @@
 .cart-card{
     display: flex;
     justify-content: space-between;
-    max-width: 32%;
+    max-width: 25rem;
     /* border: 2px solid black; */
     text-align: left;
 }

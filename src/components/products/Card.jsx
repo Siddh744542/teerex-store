@@ -1,11 +1,12 @@
-import React, { useContext, useState } from 'react'
-import { DataContext } from '../../context/dataProvider'
-import "./card.css"
-import { Link } from 'react-router-dom';
+import React, { useContext, useState } from 'react';
+import { DataContext } from '../../context/dataProvider';
+import "./card.css";
 const Card = ({ product }) => {
+    const [clickedCSS, setClickedCSS] = useState("");
     const { cart, setCart } = useContext(DataContext);
     const [buttonName, setButtonName] = useState("Add to Cart");
     function addToCart(){
+      setClickedCSS("add-to-cart-after-click");
       setCart([...cart, {product : product, quantity:1}]);
       setButtonName("Added!")
     }
@@ -20,7 +21,7 @@ const Card = ({ product }) => {
         <p style={{fontWeight:"600"}}>₹{ product.price }</p>
       </div>
 
-      <div className='add-cart-button' onClick={addToCart}>
+      <div className={`add-cart-button ${clickedCSS}`} onClick={addToCart}>
         {buttonName}
       </div>
     </div>
