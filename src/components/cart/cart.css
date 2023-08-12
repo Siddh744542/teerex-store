@@ -8,3 +8,13 @@
     gap: 1rem;
     margin-left:10rem;
 }
+.cart-total{
+    max-width: 32%;
+}
+.cart-total p{
+    text-align: center;
+}
+.hr{
+border: 1px solid #BC4639;
+  border-radius: 5px;
+}

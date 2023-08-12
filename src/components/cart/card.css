@@ -1,14 +1,22 @@
 .cart-card{
     display: flex;
-    justify-content: space-evenly;
-    max-width: 60%;
+    justify-content: space-between;
+    max-width: 32%;
+    /* border: 2px solid black; */
+    text-align: left;
 }
-
 .cart-card img{
-    max-height: 4rem;
-    max-width: 4rem;
+    max-height: 3.5rem;
+    max-width: 3.5rem;
 }
 .cart-detail{
     display: flex;
     flex-direction: column;
+}
+.cart-card button{
+    height: 2rem;
+}
+select{
+    height: 2rem;
+    width: 2rem;
 }
