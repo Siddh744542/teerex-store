@@ -3,10 +3,11 @@ import { DataContext } from '../../context/dataProvider';
 import Card from './Card';
 import "./product.css"
 const Products = () => {
-    const { products } = useContext(DataContext);
+    const { products, filteredProducts } = useContext(DataContext);
+    const productData = filteredProducts.length>0 ? filteredProducts : products;
   return (
     <div className='products-container'>
-        {products.map((product) => (
+        {productData.map((product) => (
             <Card key={product.id} product={product}/>
         ))}
     </div>

@@ -4,6 +4,7 @@ export const DataContext = createContext(null);
 
 const DataProvider = ({children})=>{
     const [products, setProducts] = useState([]);
+    const [filteredProducts, setFilteredProducts] = useState([]);
     const [cart, setCart] = useState([]);
     const [totalAmount, setTotalAmount] =useState(0);
     return(
@@ -13,7 +14,9 @@ const DataProvider = ({children})=>{
             cart,
             setCart,
             totalAmount,
-            setTotalAmount
+            setTotalAmount,
+            filteredProducts,
+            setFilteredProducts
         }}> 
         {children}
         </DataContext.Provider>

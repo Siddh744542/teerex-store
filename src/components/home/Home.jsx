@@ -3,6 +3,7 @@ import { DataContext } from "../../context/dataProvider";
 import Header from '../header/Header';
 import Products from "../products/Products";
 import Filter from "../Filter/Filter";
+import Search from '../search/Search';
 import "./home.css";
 const Home = () => {
   const { setProducts } = useContext(DataContext);
@@ -14,10 +15,10 @@ const Home = () => {
     .catch((error) => console.error(error))
   // eslint-disable-next-line react-hooks/exhaustive-deps
   },[])
-
   return (
     <div>
       <Header />
+       <Search />
       <div className='container'>
         <Filter />
         <Products />  

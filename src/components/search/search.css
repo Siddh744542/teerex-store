@@ -1,0 +1,12 @@
+.search-container{
+    display: flex;
+    justify-content: end;
+    margin: 1rem 1rem 0 1rem ;
+}
+.search-icon{
+    height: 1rem;
+    width: 1rem;
+}
+.search-button{
+    background-color: #BC4639;
+}
