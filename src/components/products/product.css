@@ -1,13 +1,13 @@
 .products-container{
     flex: 1;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     padding: 1rem;
 }
 
 @media (max-width: 768px) {
     .products-container {
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
         gap: 10px;
     }
 }

@@ -18,7 +18,8 @@ const Home = () => {
   return (
     <div>
       <Header />
-       <Search />
+        <Search />
+      
       <div className='container'>
         <Filter />
         <Products />  

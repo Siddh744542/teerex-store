@@ -1,9 +1,15 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import { DataContext } from '../../context/dataProvider'
 
 const FilterCategory = ({ name, data }) => {
   const { products, filteredProducts, setFilteredProducts } = useContext(DataContext);
 
+  useEffect(() => {
+    return () => {
+      setFilteredProducts([]);
+    };
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
   function handleSubmit(event){
     const filterName = event.target.name;
     const selectedValue = event.target.value;
