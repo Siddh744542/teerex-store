@@ -4,7 +4,7 @@ import SearchIcon from "./Search.png";
 import "./search.css"
 const Search = () => {
     const [searchTerm, setSearchTerm] = useState('');
-    const { products, setFilteredProducts } = useContext(DataContext);
+    const { products, setFilteredProducts, setIsFilterApplied } = useContext(DataContext);
 
     const handleSearch = () => {
       const searchTerms = searchTerm.toLowerCase().split(' ');
@@ -16,11 +16,12 @@ const Search = () => {
           product.type.toLowerCase().includes(term)
         )
       );
+        setIsFilterApplied(true);
         setFilteredProducts(filtered);
       };
     
       const handleSubmit = (event) => {
-        event.preventDefault();
+        
         handleSearch();
       };
 
