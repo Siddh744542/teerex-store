@@ -13,11 +13,11 @@ const Filter = () => {
     <div className='filter-container'>
       <h3>Apply filter </h3>
       <FilterCategory 
-        name="Colors"
+        name="Color"
         data={colors}
       />
       <FilterCategory
-        name="Types"
+        name="Type"
         data={types}
       />
       <FilterCategory

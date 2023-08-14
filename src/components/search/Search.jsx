@@ -1,4 +1,4 @@
-import React, { useContext, useState, useEffect } from 'react';
+import React, { useContext, useState } from 'react';
 import { DataContext } from '../../context/dataProvider';
 import SearchIcon from "./Search.png";
 import "./search.css"
@@ -33,7 +33,9 @@ const Search = () => {
         value={searchTerm}
         onChange={event => setSearchTerm(event.target.value)}
       />
-      <div onClick={handleSubmit} className='search-button' ><img className="search-icon" src={SearchIcon} alt="search-icon"/></div>
+      <div onClick={handleSubmit} className='search-button' >
+        <img className="search-icon" src={SearchIcon} alt="search-icon"/>
+      </div>
     </div>
   </div>
     

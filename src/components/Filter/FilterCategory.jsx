@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from 'react';
+import React, { Fragment, useContext, useEffect } from 'react';
 import { DataContext } from '../../context/dataProvider'
 
 const FilterCategory = ({ name, data }) => {
@@ -14,19 +14,16 @@ const FilterCategory = ({ name, data }) => {
     const filterName = event.target.name;
     const selectedValue = event.target.value;
     let filtered = products;
-    const unfilteredData = filteredProducts.length>0 ? filteredProducts : products;
+    const unfilteredData = filteredProducts.length > 0 ? filteredProducts : products;
+  
     if (filterName === 'PriceRange') {
       const priceRange = JSON.parse(selectedValue);
       filtered = unfilteredData.filter(
         (product) =>
           product.price >= priceRange.min && product.price <= priceRange.max
       );
-    } else if (filterName === 'Colors') {
-      filtered = unfilteredData.filter((product) => product.color === selectedValue);
-    } else if (filterName === 'Types') {
-      filtered = unfilteredData.filter((product) => product.type === selectedValue);
-    } else if (filterName === 'Gender') {
-      filtered = unfilteredData.filter((product) => product.gender === selectedValue);
+    } else {
+      filtered = products.filter((product) => product[filterName.toLowerCase()] === selectedValue);
     }
 
     setFilteredProducts(filtered);
@@ -38,18 +35,17 @@ const FilterCategory = ({ name, data }) => {
           <form onChange={handleSubmit}>
             {data.map((item, index) => {
               const labelValue = name === "PriceRange" ? item.name : item;
-              const inputId = name === "PriceRange" ? item.name : item;          
+              const inputId = item.name || item;         
               return (
-                <>
+                <Fragment key={index}>
                   <input
                     type="radio"
-                    key={index}
                     id={inputId}
                     name={name}
-                    value={name === "PriceRange" ? JSON.stringify({ min: item.min, max: item.max }) : item}
+                    value={name === 'PriceRange' ? JSON.stringify({ min: item.min, max: item.max }) : item}
                   />
                   <label htmlFor={inputId}>{labelValue}</label>
-                </>
+                </Fragment>
               );
             })}
           </form>

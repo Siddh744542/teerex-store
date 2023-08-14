@@ -10,7 +10,6 @@ const Header = () => {
             <Link className='cart-icon link' to="/cart"><img style={{height:"2rem", width:"2rem", margin: "0 0.5rem"}} src={img} alt='cart-icon'/>Cart</Link>
         </div>
     </div>
-    
   )
 }
 

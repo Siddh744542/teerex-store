@@ -2,7 +2,6 @@
     display: flex;
     justify-content: flex-end;
 }
-
 .search-container{
     display: flex;
     width: fit-content;
@@ -11,7 +10,7 @@
     height: 2.5rem;;
     box-shadow:  0 2px 10px rgba(0, 0, 0, 0.3);
 }
-.search-container input,button{
+.search-container input{
     border : 0; 
     padding-left: 10px;
     border-top-left-radius: 5px; 
@@ -34,8 +33,10 @@
     justify-content: center;
     background-color: #BC4639;
     border-top-right-radius: 5px;
+    border: none;
     border-bottom-right-radius: 5px;
 }
 .search-button:hover{
     cursor: pointer;
+    background-color: #a2382e;
 }

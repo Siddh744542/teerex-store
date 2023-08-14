@@ -19,12 +19,10 @@ const Home = () => {
     <div>
       <Header />
         <Search />
-      
       <div className='container'>
         <Filter />
         <Products />  
       </div>
-      
     </div>
   )
 }
