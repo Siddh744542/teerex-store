@@ -37,7 +37,7 @@ const FilterCategory = ({ name, data }) => {
               const labelValue = name === "PriceRange" ? item.name : item;
               const inputId = item.name || item;         
               return (
-                <Fragment key={index}>
+                <div className="filter-values" key={index}>
                   <input
                     type="radio"
                     id={inputId}
@@ -45,7 +45,7 @@ const FilterCategory = ({ name, data }) => {
                     value={name === 'PriceRange' ? JSON.stringify({ min: item.min, max: item.max }) : item}
                   />
                   <label htmlFor={inputId}>{labelValue}</label>
-                </Fragment>
+                </div>
               );
             })}
           </form>

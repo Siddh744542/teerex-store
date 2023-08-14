@@ -3,7 +3,8 @@
     flex-direction: column; 
     padding: 1rem;
     max-width: 12rem;
-    max-height: 23rem;
+    height: 100%;
+    overflow: auto;
     margin: 2rem 0 2rem 2rem;
     border-radius: 5px;
     background-color: white;
@@ -13,3 +14,14 @@
 .filter-container h4{
     margin: 0.3rem 0;
 }
+.filter-values{
+    display: inline-flex;
+    max-width: max-content;
+}
+
+
+@media only screen and (max-width: 600px) {
+    .filter-values{
+       display: block;
+    }
+  }
