@@ -3,11 +3,11 @@ import FilterCategory from './FilterCategory';
 import "./filter.css";
 
 const Filter = () => {
-
   const colors = ["Black", "Grey", "White", "Red", "Blue", "Yellow", "Purple", "Green", "Pink"];
   const types = ["Polo", "Hoodie", "Basic"];
   const genders = ["Women", "Men"];
   const priceRanges = [{ name: "0-₹250", min: 0, max: 250 }, { name: "₹251-₹450", min: 251, max: 450 }, { name: "₹451-₹1000+", min: 451, max: 9999999 }];
+
 
   return (
     <div className='filter-container'>

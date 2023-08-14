@@ -4,6 +4,7 @@ export const DataContext = createContext(null);
 
 const DataProvider = ({children})=>{
     const [products, setProducts] = useState([]);
+    const [isFilterApplied, setIsFilterApplied]= useState(false);
     const [filteredProducts, setFilteredProducts] = useState([]);
     const [cart, setCart] = useState([]);
     const [totalAmount, setTotalAmount] =useState(0);
@@ -16,7 +17,9 @@ const DataProvider = ({children})=>{
             totalAmount,
             setTotalAmount,
             filteredProducts,
-            setFilteredProducts
+            setFilteredProducts,
+            isFilterApplied,
+            setIsFilterApplied
         }}> 
         {children}
         </DataContext.Provider>

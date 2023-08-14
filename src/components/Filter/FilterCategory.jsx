@@ -2,19 +2,19 @@ import React, { Fragment, useContext, useEffect } from 'react';
 import { DataContext } from '../../context/dataProvider'
 
 const FilterCategory = ({ name, data }) => {
-  const { products, filteredProducts, setFilteredProducts } = useContext(DataContext);
+  const { products, filteredProducts, setFilteredProducts, isFilterApplied, setIsFilterApplied } = useContext(DataContext);
 
   useEffect(() => {
     return () => {
+      setIsFilterApplied(false);
       setFilteredProducts([]);
     };
-  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   function handleSubmit(event){
     const filterName = event.target.name;
     const selectedValue = event.target.value;
     let filtered = products;
-    const unfilteredData = filteredProducts.length > 0 ? filteredProducts : products;
+    const unfilteredData = isFilterApplied ? filteredProducts : products;
   
     if (filterName === 'PriceRange') {
       const priceRange = JSON.parse(selectedValue);
@@ -23,9 +23,9 @@ const FilterCategory = ({ name, data }) => {
           product.price >= priceRange.min && product.price <= priceRange.max
       );
     } else {
-      filtered = products.filter((product) => product[filterName.toLowerCase()] === selectedValue);
+      filtered = unfilteredData.filter((product) => product[filterName.toLowerCase()] === selectedValue);
     }
-
+    setIsFilterApplied(true);
     setFilteredProducts(filtered);
   }
     return (
