@@ -29,3 +29,9 @@
     border-radius: 5px;
     border: 0;
 }
+
+@media (max-width: 500px) {
+    .cart-items {
+        margin-left: 1.5rem;
+    }
+}

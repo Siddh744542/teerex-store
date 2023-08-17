@@ -25,6 +25,7 @@ select {
 
 .cart-card button:hover,
 select:hover {
-  background-color: #e0e0e0;
-  color: black;
+  background-color: #a2382e;
+  color:white ;
 }
+

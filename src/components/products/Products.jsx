@@ -15,7 +15,10 @@ const Products = () => {
           ))}
         </div> :
         <div style={{flex:"1", textAlign:"center"}}>
-          No Matching...
+          {
+            products.length > 0 ? <p>No Matching products...</p> : <p>Loading...</p>
+          }
+          
         </div>
       }
     </>
