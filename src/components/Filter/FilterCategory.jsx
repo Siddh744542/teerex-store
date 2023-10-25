@@ -2,7 +2,7 @@ import React, { Fragment, useContext, useEffect } from 'react';
 import { DataContext } from '../../context/dataProvider'
 
 const FilterCategory = ({ name, data }) => {
-  const { products, filteredProducts, setFilteredProducts, isFilterApplied, setIsFilterApplied } = useContext(DataContext);
+  const {products, filteredProducts, setFilteredProducts, isFilterApplied, setIsFilterApplied } = useContext(DataContext);
 
   useEffect(() => {
     return () => {
